@@ -1,0 +1,20 @@
+.container{
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.slider{
+    display: flex;
+}
+
+.slidercontainer{
+    height: 5rem;
+    width: 5rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}

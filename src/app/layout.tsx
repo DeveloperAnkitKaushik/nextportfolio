@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "../component/NavBar/Navbar";
 import Footer from "../component/Footer/Footer";
 import { Toaster } from 'react-hot-toast';
 
@@ -17,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/* <Navbar /> */}
+        {/* <div className="shadowbg"></div> */}
         {children}
         {/* <Footer /> */}
         <Toaster />

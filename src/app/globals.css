@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap');
 
 * {
     margin: 0;
@@ -20,6 +22,23 @@ body {
     --gray: rgb(207, 207, 207);
     --dark_gray: rgb(158, 158, 158);
     --heading: rgb(26, 31, 42);
+    --font_robo: "Roboto", sans-serif;
+    --font_hindi: "Tiro Devanagari Hindi", serif;
+}
+
+.shadowbg{
+    position: fixed;
+    background: url(/herobg.png);
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
 }
 
 a {
@@ -32,7 +51,7 @@ a {
     -webkit-text-fill-color: transparent;
 }
 
-img{
+img {
     width: 100%;
 }
 
@@ -75,6 +94,15 @@ img{
     padding: 1rem 5%;
 }
 
+.glass{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
 @media(max-width: 1536px) {
     .maincontainer {
         max-width: 1366px;
@@ -103,4 +131,16 @@ img{
     .maincontainer {
         max-width: 638px;
     }
+}
+
+.loadercontainer {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loaderimgcontainer {
+    width: 10rem;
 }

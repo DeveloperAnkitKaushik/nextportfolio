@@ -1,0 +1,31 @@
+.container{
+    margin: 5rem 0;
+}
+
+.innercontainer{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+}
+
+.heading{
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--heading);
+    text-align: center;
+}
+
+.techcontent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.tech{
+    height: 3rem;
+    width: 6rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
