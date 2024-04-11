@@ -15,6 +15,7 @@ body {
     height: 100%;
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
+    scroll-behavior: smooth;
 }
 
 :root {

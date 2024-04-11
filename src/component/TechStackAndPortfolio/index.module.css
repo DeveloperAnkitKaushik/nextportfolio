@@ -7,6 +7,7 @@
     background-size: cover;
     background-attachment: fixed;
     position: relative;
+    overflow: hidden;
 }
 
 .imgdown{
@@ -33,15 +34,12 @@
     font-weight: bold;
     color: var(--heading);
     text-align: center;
-    border-right: 2px solid var(--dark_gray);
-    border-radius: 1px;
-    padding-right: 5rem;
     position: relative;
 }
 
 .headingicon{
     top: -1.5rem;
-    right: 3rem;
+    right: -2rem;
     position: absolute;
     background-image: url(/heading.png);
     background-position-x: center;
@@ -86,5 +84,8 @@
         border-right: none;
         border-bottom: 2px solid var(--dark_gray);
         padding-right: 0;
+    }
+    .headingicon{
+        right: -2rem;
     }
 }

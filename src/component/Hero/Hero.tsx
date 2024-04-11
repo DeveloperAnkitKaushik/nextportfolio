@@ -13,10 +13,10 @@ const Page = () => {
     const controlsDown = useAnimation();
 
     useEffect(() => {
-        controlsTop.start({ opacity: 1, y: 0 });
-        controlsLeft.start({ opacity: 1, x: 0 });
-        controlsRight.start({ opacity: 1, x: 0 });
-        controlsDown.start({ opacity: 1, y: 0 });
+        controlsTop?.start({ opacity: 1, y: 0 });
+        controlsLeft?.start({ opacity: 1, x: 0 });
+        controlsRight?.start({ opacity: 1, x: 0 });
+        controlsDown?.start({ opacity: 1, y: 0 });
     }, []);
 
     useEffect(() => {
@@ -26,15 +26,15 @@ const Page = () => {
             const triggerPosition = windowHeight * 0.1;
 
             if (scrollPosition < triggerPosition) {
-                controlsTop.start({ opacity: 1, y: 0 });
-                controlsLeft.start({ opacity: 1, x: 0 });
-                controlsRight.start({ opacity: 1, x: 0 });
-                controlsDown.start({ opacity: 1, y: 0 });
+                controlsTop?.start({ opacity: 1, y: 0 });
+                controlsLeft?.start({ opacity: 1, x: 0 });
+                controlsRight?.start({ opacity: 1, x: 0 });
+                controlsDown?.start({ opacity: 1, y: 0 });
             } else {
-                controlsTop.start({ opacity: 0, y: -200 });
-                controlsLeft.start({ opacity: 0, x: -200 });
-                controlsRight.start({ opacity: 0, x: 200 });
-                controlsDown.start({ opacity: 0, y: 200 });
+                controlsTop?.start({ opacity: 0, y: -200 });
+                controlsLeft?.start({ opacity: 0, x: -200 });
+                controlsRight?.start({ opacity: 0, x: 200 });
+                controlsDown?.start({ opacity: 0, y: 200 });
             }
         };
 
@@ -76,7 +76,7 @@ const Page = () => {
                 <div className={styles.heading}>
                 Designing code, shaping experiences, making ideas come alive.
                 </div>
-                <Link href="" className={`${styles.btn} btngradient`}>
+                <Link href="#contact" className={`${styles.btn} btngradient`}>
                     Get in Touch
                 </Link>
             </div>

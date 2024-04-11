@@ -12,7 +12,7 @@ const page = () => {
                         <div className={`${styles.page3} ${styles.page}`}></div>
                         <div className={styles.myimg}></div>
                         <div className={styles.actualcontent}>
-                            <div className={styles.heading}>Looking for opportunities that will allow me to leverage my skills.</div>
+                            <div className={styles.heading}>Full Stack Web and App Developer & Problem Solver </div>
                             <div className={styles.para}>Master's student at GGSIPU, passionate web developer, skilled problem solver. Dedicated to crafting innovative digital solutions with precision and creativity.</div>
                             <a href='https://www.linkedin.com/in/ankitkaushik/' target="_blank" className={styles.btn}>
                                 <div className={styles.btngif}></div>
