@@ -23,7 +23,7 @@ const Page = () => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
             const windowHeight = window.innerHeight;
-            const triggerPosition = windowHeight * 0.2;
+            const triggerPosition = windowHeight * 0.1;
 
             if (scrollPosition < triggerPosition) {
                 controlsTop.start({ opacity: 1, y: 0 });
@@ -74,7 +74,7 @@ const Page = () => {
                     <img src="/logo.png" alt="" />
                 </div>
                 <div className={styles.heading}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing.
+                Designing code, shaping experiences, making ideas come alive.
                 </div>
                 <Link href="" className={`${styles.btn} btngradient`}>
                     Get in Touch

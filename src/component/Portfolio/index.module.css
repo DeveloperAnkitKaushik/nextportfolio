@@ -1,0 +1,120 @@
+.container{
+    /* background: url(/portfoliosection.png);
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+.innercontainer{
+    width: 100%;
+    margin: 5rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainheading{
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: var(--heading);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.projectscontainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.projectcontainer{
+    width: 45%;
+    height: auto;
+    border: 4px solid black;
+    border-radius: 10px;
+    position: relative;
+    transition: 0.3s;
+}
+.projectcontainer:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.dots{
+    padding: 0.3rem 0.3rem;
+    border-bottom: 4px solid black;
+    display: flex;
+    gap: 0.3rem;
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.dot{
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+}
+
+.img{
+    height: 20rem;
+    border-radius: 5px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.heading{
+    position: absolute;
+    border: 4px solid black;
+    padding: 1rem 2rem;
+    background-color: white;
+    left: 50%;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+    transform: translate(-50%,-50%);
+    transition: 0.5s;
+    border-radius: 5px;
+    color: var(--heading);
+}
+.heading:hover{
+    box-shadow: 8px 10px 0 #fabdc2;
+}
+
+@media(max-width: 768px) {
+    
+}
+
+@media(max-width: 1536px) {
+    .maincontainer {
+        max-width: 1366px;
+    }
+}
+
+@media(max-width: 1366px) {
+    .maincontainer {
+        max-width: 1280px;
+    }
+}
+
+@media(max-width: 1280px) {
+    .projectcontainer{
+        width: 100%;
+    }
+}
+
+@media(max-width: 1024px) {
+    .maincontainer {
+        max-width: 768px;
+    }
+}
+
+@media(max-width: 768px) {
+    .maincontainer {
+        max-width: 638px;
+    }
+}

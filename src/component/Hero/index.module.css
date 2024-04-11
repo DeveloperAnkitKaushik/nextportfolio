@@ -3,6 +3,12 @@
     height: 100vh;
     overflow: hidden;
     position: relative;
+    background: url(/herobg.png);
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .innercontainer{
@@ -20,7 +26,7 @@
     font-weight: bold;
     color: var(--heading);
     padding: 0 20rem;
-    line-height: 4rem;
+    line-height: 3.5rem;
     text-align: center;
     margin-bottom: 1rem;
     margin-top: 1.5rem;

@@ -26,21 +26,6 @@ body {
     --font_hindi: "Tiro Devanagari Hindi", serif;
 }
 
-.shadowbg{
-    position: fixed;
-    background: url(/herobg.png);
-    background-position-x: center;
-    background-position-y: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 9999;
-}
-
 a {
     text-decoration: none;
 }
@@ -67,7 +52,8 @@ img {
     box-shadow: 0 0 20px #eee;
     border-radius: 10px;
     display: block;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: bold;
     cursor: pointer;
 }
 

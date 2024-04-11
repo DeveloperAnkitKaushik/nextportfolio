@@ -1,0 +1,92 @@
+.container{
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    position: relative;
+}
+
+.imgdown{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url(/contactdown.png);
+    height: 20rem;
+    width: 100%;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.innercontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img{
+    background: url(/contact.png);
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 17rem;
+    width: 17rem;
+}
+
+.heading{
+    width: 100%;
+    text-align: center;
+    padding: 0 25%;
+    padding-top: 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--heading);
+}
+
+.contactcontainer{
+    width: 50%;
+    padding: 2rem 4rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+}
+
+.social{
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.socialcontainer{
+    background-color: #f6f6f6;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    border: 1px solid rgb(202, 202, 202);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(91, 91, 91);
+    gap: 1rem;
+}
+
+.icon{
+    font-size: 1.2rem;
+}
+
+@media(max-width: 500px) {
+    .social{
+        gap: 1rem;
+    }
+    .socialcontainer{
+        font-size: 0.8rem;
+    }
+    .icon{
+        font-size: 1rem;
+    }
+}
