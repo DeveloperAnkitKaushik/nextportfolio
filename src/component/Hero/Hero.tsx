@@ -1,87 +1,55 @@
-"use client"
+'use client';
 
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 import styles from "./index.module.css";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const Page = () => {
-    const speed = 0.5;
-    const controlsTop = useAnimation();
-    const controlsLeft = useAnimation();
-    const controlsRight = useAnimation();
-    const controlsDown = useAnimation();
+  const speed = 0.75;
+  useGSAP(() => {
+    gsap.from('#top', {
+      y: -200,
+      duration: speed,
+      ease: 'back.out',
+    })
+    gsap.from('#left', {
+      x: -200,
+      duration: speed,
+      ease: 'back.out',
+    })
+    gsap.from('#right', {
+      x: 200,
+      duration: speed,
+      ease: 'back.out',
+    })
+    gsap.from('#down', {
+      y: 200,
+      duration: speed,
+      ease: 'back.out',
+    })
+  }, [])
 
-    useEffect(() => {
-        controlsTop?.start({ opacity: 1, y: 0 });
-        controlsLeft?.start({ opacity: 1, x: 0 });
-        controlsRight?.start({ opacity: 1, x: 0 });
-        controlsDown?.start({ opacity: 1, y: 0 });
-    }, []);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const scrollPosition = window.scrollY;
-            const windowHeight = window.innerHeight;
-            const triggerPosition = windowHeight * 0.1;
-
-            if (scrollPosition < triggerPosition) {
-                controlsTop?.start({ opacity: 1, y: 0 });
-                controlsLeft?.start({ opacity: 1, x: 0 });
-                controlsRight?.start({ opacity: 1, x: 0 });
-                controlsDown?.start({ opacity: 1, y: 0 });
-            } else {
-                controlsTop?.start({ opacity: 0, y: -200 });
-                controlsLeft?.start({ opacity: 0, x: -200 });
-                controlsRight?.start({ opacity: 0, x: 200 });
-                controlsDown?.start({ opacity: 0, y: 200 });
-            }
-        };
-
-        window.addEventListener("scroll", handleScroll);
-
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, [controlsTop, controlsLeft, controlsRight, controlsDown]);
-
-    return (
-        <div className={styles.container}>
-            <motion.div
-                initial={{ opacity: 0, y: -200 }}
-                animate={controlsTop}
-                transition={{ duration: speed }}
-                className={`${styles.heroimg} ${styles.top}`}
-            ></motion.div>
-            <motion.div
-                initial={{ opacity: 0, x: -200 }}
-                animate={controlsLeft}
-                transition={{ duration: speed }}
-                className={`${styles.heroimg} ${styles.left}`}
-            ></motion.div>
-            <motion.div
-                initial={{ opacity: 0, x: 200 }}
-                animate={controlsRight}
-                transition={{ duration: speed }}
-                className={`${styles.heroimg} ${styles.right}`}
-            ></motion.div>
-            <motion.div
-                initial={{ opacity: 0, y: 200 }}
-                animate={controlsDown}
-                transition={{ duration: speed }}
-                className={`${styles.heroimg} ${styles.down}`}
-            ></motion.div>
-            <div className={styles.innercontainer}>
-                <div className={styles.imgcontainer}>
-                    <img src="/logo.png" alt="" />
-                </div>
-                <div className={styles.heading}>
-                Designing code, shaping experiences, making ideas come alive.
-                </div>
-                <Link href="#contact" className={`${styles.btn} btngradient`}>
-                    Get in Touch
-                </Link>
-            </div>
+  return (
+    <div className={styles.container}>
+      <div className={styles.innercontainer}>
+        <div className={styles.imgcontainer}>
+          <img src="/logo.png" alt="" />
         </div>
-    );
+        <div className={styles.heading}>
+          Designing code, shaping experiences, making ideas come alive.
+        </div>
+        <Link href="#contact" className={`${styles.btn} btngradient`}>
+          Get in Touch
+        </Link>
+      </div>
+      <div className={`${styles.heroimg} ${styles.top}`} id="top"></div>
+      <div className={`${styles.heroimg} ${styles.left}`} id="left"></div>
+      <div className={`${styles.heroimg} ${styles.right}`} id="right"></div>
+      <div className={`${styles.heroimg} ${styles.down}`} id="down"></div>
+    </div>
+  );
 };
 
 export default Page;
