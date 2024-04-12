@@ -1,55 +1,38 @@
-'use client';
+"use client";
 
 import Link from "next/link";
-import { useEffect, useRef } from "react";
 import styles from "./index.module.css";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+import { motion } from "framer-motion";
 
-const Page = () => {
-  const speed = 0.75;
-  useGSAP(() => {
-    gsap.from('#top', {
-      y: -200,
-      duration: speed,
-      ease: 'back.out',
-    })
-    gsap.from('#left', {
-      x: -200,
-      duration: speed,
-      ease: 'back.out',
-    })
-    gsap.from('#right', {
-      x: 200,
-      duration: speed,
-      ease: 'back.out',
-    })
-    gsap.from('#down', {
-      y: 200,
-      duration: speed,
-      ease: 'back.out',
-    })
-  }, [])
-
-  return (
-    <div className={styles.container}>
-      <div className={styles.innercontainer}>
-        <div className={styles.imgcontainer}>
-          <img src="/logo.png" alt="" />
+const page = () => {
+    const speed = 0.5;
+    
+    return (
+        <div className={styles.container}>
+            <motion.div
+                initial={{opacity: 0, y: -200 }} animate={{ y: -200 }} transition={{ duration: 0.5 }} whileInView={{ opacity: 1, y:0 }} className={`${styles.heroimg} ${styles.top}`}>
+                    
+            </motion.div>
+            <motion.div
+                initial={{opacity: 0, x: -200 }} animate={{ x: -100 }} exit={{  }} transition={{ duration: 0.5 }} whileInView={{ opacity: 1, x:0 }} className={`${styles.heroimg} ${styles.left}`}>
+                    
+            </motion.div>
+            <motion.div
+                initial={{opacity: 0, x: 200 }} animate={{ x: 200 }} transition={{ duration: 0.5 }} whileInView={{ opacity: 1, x:0 }} className={`${styles.heroimg} ${styles.right}`}>
+                    
+            </motion.div>
+            <motion.div
+                initial={{opacity: 0, y: 200 }} animate={{ y: 100 }} transition={{ duration: 0.5 }} whileInView={{ opacity: 1, y:0 }} className={`${styles.heroimg} ${styles.down}`}>
+                    
+            </motion.div>
+            <div className={styles.innercontainer}>
+                <div className={styles.imgcontainer}><img src="/logo.png" alt="" /></div>
+                <div className={styles.heading}>Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+                <Link href='' className={`${styles.btn} btngradient`}>Get in Touch</Link>
+            </div>
         </div>
-        <div className={styles.heading}>
-          Designing code, shaping experiences, making ideas come alive.
-        </div>
-        <Link href="#contact" className={`${styles.btn} btngradient`}>
-          Get in Touch
-        </Link>
-      </div>
-      <div className={`${styles.heroimg} ${styles.top}`} id="top"></div>
-      <div className={`${styles.heroimg} ${styles.left}`} id="left"></div>
-      <div className={`${styles.heroimg} ${styles.right}`} id="right"></div>
-      <div className={`${styles.heroimg} ${styles.down}`} id="down"></div>
-    </div>
-  );
-};
+    );
+}
 
-export default Page;
+export default page;
+
