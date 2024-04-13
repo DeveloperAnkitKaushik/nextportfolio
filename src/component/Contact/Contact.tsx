@@ -31,6 +31,7 @@ const page = () => {
             <motion.div
                 className={styles.imgdown}
                 initial={{ opacity: 0, y: 100 }}
+                transition={{ duration: 0.5 }}
                 animate={controlsFooter}
             ></motion.div>
             <div className="maincontainer">

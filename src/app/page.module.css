@@ -1,0 +1,24 @@
+.container{
+    background: url(/herobg.png);
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.errorcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 92.2vh;
+}
+
+.errorimgcont {
+    width: 20rem;
+}
+
+.errorimgcont img {
+    width: 100%;
+}
