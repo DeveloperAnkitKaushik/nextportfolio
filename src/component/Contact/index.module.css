@@ -1,10 +1,10 @@
-.container{
+.container {
     padding-top: 10rem;
     padding-bottom: 5rem;
     position: relative;
 }
 
-.imgdown{
+.imgdown {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -17,14 +17,15 @@
     background-size: cover;
 }
 
-.innercontainer{
+.innercontainer {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.img{
+.img {
     background: url(/contact.png);
     background-position-x: center;
     background-position-y: center;
@@ -34,7 +35,7 @@
     width: 17rem;
 }
 
-.heading{
+.heading {
     width: 100%;
     text-align: center;
     padding: 0 25%;
@@ -44,14 +45,14 @@
     color: var(--heading);
 }
 
-.contactcontainer{
+.contactcontainer {
     width: 50%;
     padding: 2rem 4rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 20px;
 }
 
-.social{
+.social {
     margin-bottom: 5rem;
     margin-top: 2rem;
     display: flex;
@@ -61,7 +62,7 @@
     flex-wrap: wrap;
 }
 
-.socialcontainer{
+.socialcontainer {
     background-color: #f6f6f6;
     padding: 1rem 2rem;
     border-radius: 10px;
@@ -73,20 +74,28 @@
     font-weight: bold;
     color: rgb(91, 91, 91);
     gap: 1rem;
+    transition: 0.3s;
 }
 
-.icon{
+.socialcontainer:hover {
+    box-shadow: 8px 10px 0 #fabdc2;
+}
+
+.icon {
     font-size: 1.2rem;
 }
 
+
 @media(max-width: 500px) {
-    .social{
+    .social {
         gap: 1rem;
     }
-    .socialcontainer{
+
+    .socialcontainer {
         font-size: 0.8rem;
     }
-    .icon{
+
+    .icon {
         font-size: 1rem;
     }
 }

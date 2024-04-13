@@ -1,11 +1,5 @@
 .container{
     padding-top: 8rem;
-    background: url(/herobg.png);
-    background-position-x: center;
-    background-position-y: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
     position: relative;
     overflow: hidden;
 }
