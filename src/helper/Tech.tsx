@@ -5,4 +5,5 @@ export const techarr = [
     "/tech/4.png",
     "/tech/5.png",
     "/tech/6.png",
+    "/tech/7.png",
 ]

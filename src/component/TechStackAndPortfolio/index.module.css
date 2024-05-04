@@ -1,5 +1,5 @@
 .container{
-    padding-top: 8rem;
+    padding-top: 6rem;
     position: relative;
     overflow: hidden;
 }
@@ -19,8 +19,10 @@
 .innercontainer{
     display: flex;
     padding: 2rem 0;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    gap: 5rem;
 }
 
 .heading{
@@ -36,6 +38,19 @@
     right: -2rem;
     position: absolute;
     background-image: url(/heading.png);
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 3rem;
+    height: 3rem;
+}
+
+.headingicon2{
+    top: -1.5rem;
+    left: -2.5rem;
+    position: absolute;
+    background-image: url(/heading2.png);
     background-position-x: center;
     background-position-y: center;
     background-repeat: no-repeat;

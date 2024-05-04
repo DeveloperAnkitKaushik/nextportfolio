@@ -8,7 +8,8 @@
 
 .innercontainer{
     width: 100%;
-    margin: 5rem 0;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
 }
