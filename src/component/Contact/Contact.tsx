@@ -27,7 +27,7 @@ const page = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, [controlsFooter]);
     return (
-        <div className={styles.container} id="contact">
+        <div className={styles.container}>
             <motion.div
                 className={styles.imgdown}
                 initial={{ opacity: 0, y: 100 }}
@@ -35,7 +35,7 @@ const page = () => {
                 animate={controlsFooter}
             ></motion.div>
             <div className="maincontainer">
-                <div className={styles.innercontainer}>
+                <div className={styles.innercontainer} id="contact">
                     <div className={styles.img}></div>
                     <div className={styles.heading}>Don't Be shy, Hit me up! 👇</div>
                     <div className={styles.social}>
