@@ -1,0 +1,156 @@
+.container {
+    padding-top: 10rem;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.innercontainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img {
+    background: url(/contact.png);
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 17rem;
+    width: 17rem;
+}
+
+.heading {
+    width: 100%;
+    text-align: center;
+    padding: 0 25%;
+    padding-top: 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--heading);
+}
+
+.contactcontainer {
+    width: 50%;
+    padding: 2rem 4rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+}
+
+.social {
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.socialcontainer {
+    background-color: #f6f6f6;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    border: 1px solid rgb(202, 202, 202);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(91, 91, 91);
+    gap: 1rem;
+    transition: 0.3s;
+}
+
+.socialcontainer:hover {
+    box-shadow: 8px 10px 0 #fabdc2;
+}
+
+.icon {
+    font-size: 1.2rem;
+}
+
+
+@media(max-width: 500px) {
+    .social {
+        gap: 1rem;
+    }
+
+    .socialcontainer {
+        font-size: 0.8rem;
+    }
+
+    .icon {
+        font-size: 1rem;
+    }
+}
+
+.new_footer_top {
+    padding: 60px 0px 270px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.footer_bg {
+    position: absolute;
+    bottom: 0;
+    background: url("/footer/footerbg.png") no-repeat scroll center 0;
+    width: 100%;
+    height: 266px;
+}
+
+.footer_bg .footer_bg_one {
+    background: url("/footer/car.gif") no-repeat center center;
+    width: 330px;
+    height: 105px;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    -webkit-animation: myfirst 22s linear infinite;
+    animation: myfirst 22s linear infinite;
+}
+
+.footer_bg .footer_bg_two {
+    background: url("/footer/cycle.gif") no-repeat center center;
+    width: 88px;
+    height: 100px;
+    background-size: 100%;
+    bottom: 0;
+    left: 38%;
+    position: absolute;
+    -webkit-animation: myfirst 30s linear infinite;
+    animation: myfirst 30s linear infinite;
+}
+
+@-moz-keyframes myfirst {
+    0% {
+      left: -25%;
+    }
+  
+    100% {
+      left: 100%;
+    }
+  }
+  
+  @-webkit-keyframes myfirst {
+    0% {
+      left: -25%;
+    }
+  
+    100% {
+      left: 100%;
+    }
+  }
+  
+  @keyframes myfirst {
+    0% {
+      left: -25%;
+    }
+  
+    100% {
+      left: 100%;
+    }
+  }
