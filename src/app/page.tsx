@@ -7,14 +7,14 @@ import Contact from "../component/Contact/Contact";
 import Footer from "../component/Footer/Footer";
 
 const Home = () => {
-   
-    return(
+
+    return (
         <div className={styles.container}>
-            <Hero/>
-            <About/>
-            <TechStackAndPortfolio/>
-            <Portfolio/>
-            <Contact/>
+            <Hero />
+            <About />
+            <TechStackAndPortfolio />
+            <Portfolio />
+            <Contact />
         </div>
     );
 }

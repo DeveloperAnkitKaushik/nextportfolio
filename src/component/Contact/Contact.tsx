@@ -1,39 +1,15 @@
-'use client';
-
 import styles from "./index.module.css";
-import { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaGithubAlt } from "react-icons/fa";
 import { MdMarkEmailRead } from "react-icons/md";
 
 const page = () => {
-    const controlsFooter = useAnimation();
-    useEffect(() => {
-        const handleScroll = () => {
-            const scrollPosition = window.scrollY;
-            const windowHeight = window.innerHeight;
-            const footerPosition = document.documentElement.scrollHeight - windowHeight * 1.1;
 
-            if (scrollPosition >= footerPosition) {
-                controlsFooter.start({ opacity: 1, y: 0 });
-            } else {
-                controlsFooter.start({ opacity: 0, y: 100 });
-            }
-        };
-
-        window.addEventListener("scroll", handleScroll);
-
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, [controlsFooter]);
     return (
         <div className={styles.container}>
-            <motion.div
+            <div
                 className={styles.imgdown}
-                initial={{ opacity: 0, y: 100 }}
-                transition={{ duration: 0.5 }}
-                animate={controlsFooter}
-            ></motion.div>
+            ></div>
             <div className="maincontainer">
                 <div className={styles.innercontainer} id="contact">
                     <div className={styles.img}></div>
